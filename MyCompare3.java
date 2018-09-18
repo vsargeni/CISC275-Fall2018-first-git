@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class MyCompare3 {
+public class MyCompare3{
 	
 	public static void main(String[] args){
 		
@@ -22,5 +23,35 @@ public class MyCompare3 {
 		System.out.println(dogs);
 		Collections.sort(dogs);
 		System.out.println(dogs);
+	}
+
+}
+
+class Animal implements Comparable<Animal>{
+	String name;
+	int legs;
+
+	public Animal(){
+
+	}
+
+	public int getLegs(){
+		return legs;
+	}
+
+	public String toString(){
+		return name + " " + legs; 
+	}
+
+
+	public int compareTo(Animal ani){
+		return this.compareTo(ani);
+	}
+}
+
+class Dog extends Animal{
+	public Dog(String name, int legs){
+		legs=this.legs;
+		name=this.name;
 	}
 }
