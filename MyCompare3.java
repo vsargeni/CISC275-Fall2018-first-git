@@ -45,13 +45,22 @@ class Animal implements Comparable<Animal>{
 
 
 	public int compareTo(Animal ani){
-		return this.compareTo(ani);
+		if (ani.getLegs()>this.getLegs()){
+			return 1;
+		}
+		else if(ani.getLegs()<this.getLegs()){
+			return -1;
+		}
+		else{
+			return 0;
+		}
+		
 	}
 }
 
 class Dog extends Animal{
 	public Dog(String name, int legs){
-		legs=this.legs;
-		name=this.name;
+		this.legs=legs;
+		this.name=name;
 	}
 }
